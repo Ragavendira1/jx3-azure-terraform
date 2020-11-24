@@ -8,6 +8,7 @@ jxRequirements:
       gitRef: master
       gitURL: https://github.com/jenkins-x/jx3-pipeline-catalog.git
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
@@ -26,6 +27,8 @@ jxRequirements:
         enabled: false
         production: false
     key: dev
+    owner: Ragavendira1
+    repository: jx3-azure-terraform
   - ingress:
       domain: ""
       externalDNS: false
@@ -54,6 +57,8 @@ jxRequirements:
       enabled: false
       production: false
   kaniko: true
+  pipelineUser:
+    username: Ragavendira1
   repository: nexus
   secretStorage: vault
   storage:

@@ -7,29 +7,48 @@ buildPacks:
     gitRef: master
     gitURL: https://github.com/jenkins-x/jx3-pipeline-catalog.git
 cluster:
-  clusterName: ""
+  chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
   devEnvApprovers:
   - todo
-  environmentGitOwner: "todo"
+  environmentGitOwner: todo
   gitKind: github
   gitName: github
   gitServer: https://github.com
   namespace: jx
   provider: aks
-  registry: ""
 environments:
-- key: dev
-  owner: ""
-  repository: ""
-- key: staging
-  owner: ""
-  repository: ""
-- key: production
-  owner: ""
-  repository: ""
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  owner: Ragavendira1
+  repository: jx3-azure-terraform
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
 gitops: true
 ingress:
-  domain: ""
+  domain: 20.193.14.13.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
@@ -37,6 +56,8 @@ ingress:
     enabled: false
     production: false
 kaniko: true
+pipelineUser:
+  username: Ragavendira1
 repository: nexus
 secretStorage: vault
 storage:
