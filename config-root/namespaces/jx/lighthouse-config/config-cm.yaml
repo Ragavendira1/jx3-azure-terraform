@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - Ragavendira1/jx3-azure-terraform
-      target_url: http://dashboard-jx.
+      target_url: http://dashboard-jx.20.193.14.13.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
